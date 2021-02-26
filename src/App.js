@@ -1,25 +1,26 @@
-import logo from './logo.svg';
+
+import React from 'react';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  render() {
+    const contextValue = {}
+    return (
+      <div className="App">
+        <NotesContext.Provider value={contextValue}>
+        <header className='App__header'>
+          <h1>
+            <Link to='/'>Calenday</Link>
+          </h1>
+          <nav>Nav</nav>
+        </header>
+        <main className='App__main'>
+          
+        </main>
+        </NotesContext.Provider>
+      </div>
+    );
+  }
 }
 
 export default App;

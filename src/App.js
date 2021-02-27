@@ -7,6 +7,7 @@ import TodaySchedule from './TodaySchedule/TodaySchedule'
 import Day from './Day/Day';
 import Week from './Week/Week';
 import './App.css';
+import EventPage from './EventPage/EventPage';
 
 
 class App extends React.Component {
@@ -32,6 +33,10 @@ class App extends React.Component {
         />
         <Route
          path='/EventForm'
+        />
+        <Route 
+         path='/event-page'
+         component={EventPage}
         />
       </>
     )

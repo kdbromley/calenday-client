@@ -1,0 +1,13 @@
+
+.TodaySchedule__container {
+    margin: 5%;
+}
+
+.TodaySchedule__title {
+    border-bottom: 0.25px solid black;
+}
+
+.TodaySchedule__events-list {
+    list-style: none;
+    padding-left: 0;
+}

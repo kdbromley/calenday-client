@@ -10,7 +10,7 @@ export default function Day() {
                 <Link to='#'><EventCard /></Link>
             </div>
 
-            <Link to='#'>See my week &rarr;</Link>
+            <Link to='/week'>See my week &rarr;</Link>
         </div>
     )
 }

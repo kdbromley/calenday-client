@@ -1,14 +1,17 @@
 import { Component } from 'react';
 import { Link } from 'react-router-dom';
+import './NavBar.css';
 
 export default class NavBar extends Component {
     render() {
         return (
-            <>
-              <h5><Link to='/month'>Month</Link></h5>
-              <h5><Link to='/week'>Week</Link></h5>
-              <h5><Link to='/day'>Day</Link></h5>
-            </>
+            <nav>
+                <ul className='NavBar__list'>
+                    <li><Link to='/month'>Month</Link></li>
+                    <li><Link to='/week'>Week</Link></li>
+                    <li><Link to='/day'>Day</Link></li>
+                </ul>
+            </nav>
         )
     }
 }

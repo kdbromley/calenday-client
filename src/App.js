@@ -4,7 +4,9 @@ import { Route } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import NavBar from './NavBar/NavBar';
 import TodaySchedule from './TodaySchedule/TodaySchedule'
+import Day from './Day/Day';
 import './App.css';
+
 
 class App extends React.Component {
 
@@ -18,6 +20,7 @@ class App extends React.Component {
         />
         <Route 
           path='/day'
+          component={Day}
         />
         <Route
          path='/week'

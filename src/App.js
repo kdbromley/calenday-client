@@ -6,7 +6,7 @@ import EventsContext from './EventsContext';
 import NavBar from './NavBar/NavBar';
 import TodaySchedule from './TodaySchedule/TodaySchedule'
 import Day from './Day/Day';
-import Week from './Week/Week';
+import Month from './Month/Month'
 import './App.css';
 import EventPage from './EventPage/EventPage';
 
@@ -32,7 +32,6 @@ class App extends React.Component {
 
   componentDidMount() {
     let today = new Date().toDateString()
-    console.log(today)
     let events = STORE.events
     this.loadEvents(events)
     this.getTodayDate(today)
@@ -65,18 +64,15 @@ class App extends React.Component {
          component={TodaySchedule}
         />
         <Route 
-          path='/day'
-          component={Day}
-        />
-        <Route
-         path='/week'
-         component={Week}
+         path='/month'
+         component={Month}
         />
         <Route 
-         path='/month'
+         path='/day'
+         component={Day}
         />
         <Route
-         path='/EventForm'
+         path='/event-form'
         />
         <Route 
          path='/event-page'

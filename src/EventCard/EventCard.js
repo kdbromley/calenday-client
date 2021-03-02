@@ -1,9 +1,16 @@
+import { Component } from 'react';
 import './EventCard.css'
 
-export default function EventCard() {
-    return (
-        <div className='EventCard__container'>
-            <h5 className='EventCard__text'><span className='time'>7 am:</span> Meeting with John</h5>
-        </div>
-    )
+export default class EventCard extends Component {
+    static defaultProps = {
+        event: {}
+    }
+    render() {
+        const { event } = this.props || {}
+        return (
+            <div className='EventCard__container'>
+                <h5 className='EventCard__text'><span className='time'>{event.startTime}</span> {event.eventTitle}</h5>
+            </div>
+        )
+    }
 }
